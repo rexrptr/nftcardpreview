@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap");
+
+$ff-ss: "Outfit";
+
+// accent color
+$softblue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// bg colors
+
+$mainbg: hsl(217, 54%, 11%);
+$cardbg: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: $ff-ss;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $mainbg;
+}
+p {
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.container {
+  padding: 5em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  background-color: $cardbg;
+  border-radius: 10px;
+  padding: 1.8em;
+  max-width: 400px;
+}
+
+.card-text {
+  h2,
+  a {
+    color: $white;
+    margin: 0.8em 0;
+    font-weight: 600;
+    transition: color 250ms;
+  }
+
+  a:hover {
+    color: $cyan;
+  }
+
+  p {
+    color: $softblue;
+    margin: 0.8em 0;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+}
+
+.price-days {
+  display: flex;
+  justify-content: space-between;
+
+  .price {
+    color: $cyan;
+    font-weight: 400;
+  }
+  .days {
+    color: $softblue;
+  }
+}
+
+.eterum-icon {
+  position: relative;
+  top: 4px;
+  width: 12px;
+  margin-right: 8px;
+}
+
+.clock-icon {
+  position: relative;
+  top: 4px;
+  width: 18px;
+  margin-right: 4px;
+}
+
+hr {
+  margin-top: 1em;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid;
+  border-color: $line;
+}
+
+.card-foot {
+  padding: 0;
+
+  p {
+    margin: 4px 0;
+    font-weight: 400;
+  }
+  a {
+    color: $white;
+    transition: color 250ms;
+  }
+  a:hover {
+    color: $cyan;
+  }
+}
+.avatar-icon {
+  position: relative;
+  width: 38px;
+  top: 14px;
+  margin-right: 14px;
+  border-radius: 20px;
+  border: white solid 1px;
+}
+
+.card-image {
+  position: relative;
+  background-color: $cyan;
+  border-radius: 12px;
+  height: 59%;
+}
+
+.eth-img {
+  opacity: 1;
+  transition: opacity ease 250ms;
+}
+
+.card-image:hover .eth-img {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.watch-icon {
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity ease 250ms;
+}
+
+.card-image:hover .watch-icon {
+  opacity: 1;
+}
